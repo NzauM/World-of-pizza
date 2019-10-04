@@ -1,0 +1,38 @@
+body{
+    width: 100%;
+}
+header{
+    background-image: url("https://www.musingsofarover.com/wp-content/uploads/2017/06/Things-To-Do-In-Greenville-In-Summer-7-800x534.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90vh;
+}
+
+.overlay{
+    background-color: rgba(0,0, 0, 0.6);
+    justify-content: center;
+    height: 90vh;
+    text-align: center;
+    padding-top: 15%;
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+    /* justify-content: space-between; */
+    /* text-decoration: none; */
+    width: 80%;
+    /* margin: auto; */
+    margin-left: 60%;
+}
+
+nav ul li{
+    text-decoration: none;
+    /* padding: 5%; */
+    list-style-type: none;
+    padding-right: 5%;
+    flex-wrap: wrap;
+}
