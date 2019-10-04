@@ -1,18 +1,19 @@
 body{
     width: 100%;
+    overflow-x: hidden;
 }
 header{
-    background-image: url("https://www.musingsofarover.com/wp-content/uploads/2017/06/Things-To-Do-In-Greenville-In-Summer-7-800x534.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 90vh;
+    background-image: url("https://media.gettyimages.com/photos/delicious-italian-pizza-picture-id1124359123?s=2048x2048");
+    /* background-position: center;
+    background-size: cover; */
+    /* background-repeat:repeat; */
+    height: 100vh;
 }
 
 .overlay{
-    background-color: rgba(0,0, 0, 0.6);
+    background-color: rgba(0,0, 0, 0.7);
     justify-content: center;
-    height: 90vh;
+    height: 100vh;
     text-align: center;
     padding-top: 15%;
     color: white;
@@ -27,6 +28,7 @@ nav ul{
     width: 80%;
     /* margin: auto; */
     margin-left: 60%;
+    background-color: transparent;
 }
 
 nav ul li{
@@ -34,5 +36,15 @@ nav ul li{
     /* padding: 5%; */
     list-style-type: none;
     padding-right: 5%;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+}
+
+.icons{
+    display: flex;
+}
+
+#aboutImage{
+    float: left;
+    /* padding-right: 10%; */
+    /* height: 300px; */
 }
