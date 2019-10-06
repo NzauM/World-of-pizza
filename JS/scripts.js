@@ -104,5 +104,19 @@ function getToppingPrice(toppings){
 // User interface logic
 
 $("document").ready(function(){
-    
+    // For pizza size
+
+    function getSize(){
+        return $("pizza-size")
+        .find (":selected")
+        .val();
+    }
+
+    // For the crust type
+
+    function getCrust(){
+        return $("crust-type")
+        .find(":selscted")
+        .val();
+    }
 })
