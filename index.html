@@ -25,22 +25,89 @@
     </div>
   </header>
   <section>
-    <img src="https://cdn.pixabay.com/photo/2017/08/06/06/42/pizza-2589569_960_720.jpg">
+    <h2 style="text-align:center">ABOUT US</h2>
+    <img src="https://cdn.pixabay.com/photo/2016/11/11/10/19/chef-1816249_960_720.jpg"  id="aboutImage">
       <div id="welcome">
-    <h1>Welcome </h1>
+    <h4>Welcome </h4>
       <p>Here,s how you can get the world's best pizza.</p><br><br>
       </div>
       <div class="icons">
       <figure id="toLeft">
           <img src="./Images/order online icon.jpg" width="200px">
+          <figcaption>Order the size and type <br>you like online</figcaption>
       </figure>
       <figure id="toLeft2">
         <img src="./Images/delivery location.svg" width="200px">
+        <figcaption>Enter the delivery location <br>to have it brought to you.</figcaption>
       </figure>
       <figure id="toLeft3">
         <img src="./Images/pizza delivery.jpg" width="200px">
+        <figcaption>Prepare your appetite.<br>Pizza will be there in a few<br>ENJOY!!</figcaption>
       </figure>
     </div>
   </section>
+  <section id="menu">
+    <h1 id="menuTitle">OUR MENU</h1>
+      <div class="row">
+          <figure>
+            <img src="https://cdn.pixabay.com/photo/2017/12/05/20/10/pizza-3000285_960_720.png" width="450px">
+            <figcaption>Small</figcaption>
+          </figure>
+            <figure>
+            <img src="http://pngimg.com/uploads/pizza/pizza_PNG44043.png" width="300px">
+            <figcaption>Medium</figcaption>
+            </figure>
+            <div id="spacing"></div>
+            <figure>
+              <img src="https://backgroundcheckall.com/wp-content/uploads/2017/12/pizza-transparent-background-3-300x200.png" width="400px">
+              <figcaption>Large</figcaption>
+            </figure>
+  </section>
+  <img id="lefter" src="https://africa-public.food.jumia.com/assets/production/ke/layout/themes/capricciosa_hellofood/images/en/jumiafood-homepage-right-splash-services.jpg?v=1555497034">
+  <h2 style="text-align:center">MAKE AN ORDER</h2>
+  <form id="order">
+    <div class="form-group">
+      <label for="size">Choose size of Pizza</label><br>
+      <select class="form-control">
+        
+      <option value="Small" class="form-control">Small</option>
+      <option value="Medium" class="form-control">Medium</option>
+      <option value="Large" class="form-control">Large</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="crust">Choose the crust you'd like</label><br>
+      <select class="form-control">
+      <option value="crispy" class="form-control">Crispy</option>
+      <option value="stuffed" class="form-control">Stuffed</option>
+      <option value="glutenFree" class="form-control">Glutten-free</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="toppings">Choose all the toppings you want</label>
+      <input type="checkbox" name="pepperoni" value="pepperoni" class="form-control" >Pepperoni
+      <input type="checkbox" name="mushrooms" value="mushrooms" class="form-control" >Mushrooms
+      <input type="checkbox" name="pineapple" value="pineapple" class="form-control" >Pineapple
+      <input type="checkbox" name="chicken" value="Chicken" class="form-control" >Chicken
+    </div>
+    <div class="form-group">
+      <label for="quantity">How many would you like?</label>
+      <input type="number" class="form-control">
+    </div>
+    <div class="form-group">
+    <button type="submit"  id="submit">Checkout Order</button>
+    <button type="submit"  id="reset">Start new Order</button>
+    </div>
+  </form>
+  <div id="summary">
+    <h1>Order Summary</h1>
+    <h4>You ordered:</h4>
+    <div id="orderSummary"></div>
+    <button type="submit" id="delivery">Request Delivery</button>
+    <button type="submit" id="pickup">personal pick up</button>
+  </div>
+  <footer>
+    
+  </footer>
 </body>
 </html>
