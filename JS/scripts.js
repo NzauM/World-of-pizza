@@ -77,3 +77,32 @@ function getCrustPrice(crust){
     }
 }
 
+function getToppingPrice(toppings){
+    var totalToppings = 0;
+    for(i=0; i< toppings.length; i++){
+        if(toppings[i] == 'pineapple'){
+            totalToppings += 100;
+        }
+
+        if(toppings[i] == 'pepperoni'){
+            totalToppings += 150;
+        }
+
+        if(toppings[i] == 'mushrooms'){
+            totalToppings +=120;
+        }
+
+        if(toppings[i] == 'chicken'){
+            totalToppings +=200;
+        }
+    }
+
+    return totalToppings * 1;
+}
+
+
+// User interface logic
+
+$("document").ready(function(){
+    
+})
