@@ -63,3 +63,17 @@ function getSizePrice(size){
     }
 }
 
+function getCrustPrice(crust){
+    if(crust === 'crispy'){
+        return pricePerCrust.crispy * 1;
+    }
+
+    else if(crust === 'stuffed'){
+        return pricePerCrust.stuffed * 1;
+    }
+
+    else{
+        return pricePerCrust.gluttenFree * 1;
+    }
+}
+
