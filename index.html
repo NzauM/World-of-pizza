@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./Bootstrap/bootstrap-4.3.1-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="./CSS/styles.css">
+  <script src="./JS/jQuery.js"></script>
+  <script src="./JS/scripts.js"></script>
   <title>World of Pizza</title>
 </head>
 <body>
@@ -67,23 +69,23 @@
   <h2 style="text-align:center">MAKE AN ORDER</h2>
   <form id="order">
     <div class="form-group">
-      <label for="size">Choose size of Pizza</label><br>
-      <select class="form-control">
+      <label for="sizes">Choose size of Pizza</label><br>
+      <select class="form-control" id="sizes">
         
       <option value="Small" class="form-control">Small</option>
       <option value="Medium" class="form-control">Medium</option>
       <option value="Large" class="form-control">Large</option>
       </select>
     </div>
-    <div class="form-group">
+    <div class="form-group" >
       <label for="crust">Choose the crust you'd like</label><br>
-      <select class="form-control">
+      <select class="form-control" id="crusts">
       <option value="crispy" class="form-control">Crispy</option>
       <option value="stuffed" class="form-control">Stuffed</option>
       <option value="glutenFree" class="form-control">Glutten-free</option>
       </select>
     </div>
-    <div class="form-group">
+    <div class="form-group" id="toppings">
       <label for="toppings">Choose all the toppings you want</label>
       <input type="checkbox" name="pepperoni" value="pepperoni" class="form-control" >Pepperoni
       <input type="checkbox" name="mushrooms" value="mushrooms" class="form-control" >Mushrooms
@@ -91,18 +93,22 @@
       <input type="checkbox" name="chicken" value="Chicken" class="form-control" >Chicken
     </div>
     <div class="form-group">
-      <label for="quantity">How many would you like?</label>
+      <label for="quantity" id="quantity">How many would you like?</label>
       <input type="number" class="form-control">
     </div>
     <div class="form-group">
     <button type="submit"  id="submit">Checkout Order</button>
     <button type="submit"  id="reset">Start new Order</button>
+    <button type="submit"  id="gettotal">Check Total</button>
     </div>
   </form>
+  <h1 id="money"></h1>
   <div id="summary">
     <h1>Order Summary</h1>
     <h4>You ordered:</h4>
-    <div id="orderSummary"></div>
+    <div id="orderSummary">
+      <table id="appendOrder"></table>
+    </div>
     <button type="submit" id="delivery">Request Delivery</button>
     <button type="submit" id="pickup">personal pick up</button>
   </div>

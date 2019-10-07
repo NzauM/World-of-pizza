@@ -1,13 +1,12 @@
 function Pizza(size,crust){
-    this.size = pizzaSize;
-    this.crust = pizzaCrut;
+    this.size = size;
+    this.crust = crust;
     this.toppings = [];
 };
 
-function Delivery(name,location){
-    this.name = name;
-    this.location = deliveryLOcation;
-};
+function deliver(location){
+    this.location = location;
+}
 
 var pricePerSize = {
     small: 650,
@@ -19,29 +18,29 @@ var pricePerCrust = {
     crispy: 150,
     stuffed:200,
     gluttenFree:200,
-},
+};
+
 
 var toppingsperSize = [
     {
-        pineapple={
+        pineapple: {
             small:50,
             medium:100,
             large:150,
         },
-
-        pepperoni={
+        pepperoni: {
             small:100,
             medium:150,
             large:200,
         },
 
-        mushroom={
+        mushroom: {
             small:80,
             medium:120,
             large:150,
         },
 
-        chicken={
+        chicken: {
             small:150,
             medium:200,
             large:250,
@@ -50,11 +49,11 @@ var toppingsperSize = [
 ];
 
 // Start Calculator
-function getSizePrice(size){
-    if (size === 'small'){
+function getSizePrice(pizzaSize){
+    if ( pizzaSize === 'small'){
         return pricePerSize.small * 1;
     }
-    else if(size === 'medium'){
+    else if(pizzaSize === 'medium'){
         return pricePerSize.medium * 1;
     }
 
@@ -63,12 +62,12 @@ function getSizePrice(size){
     }
 }
 
-function getCrustPrice(crust){
-    if(crust === 'crispy'){
+function getCrustPrice(pizzaCrust){
+    if( pizzaCrust === 'crispy'){
         return pricePerCrust.crispy * 1;
     }
 
-    else if(crust === 'stuffed'){
+    else if(pizzaCrust === 'stuffed'){
         return pricePerCrust.stuffed * 1;
     }
 
@@ -82,6 +81,7 @@ function getToppingPrice(toppings){
     for(i=0; i< toppings.length; i++){
         if(toppings[i] == 'pineapple'){
             totalToppings += 100;
+            
         }
 
         if(toppings[i] == 'pepperoni'){
@@ -101,22 +101,109 @@ function getToppingPrice(toppings){
 }
 
 
+
+
+
 // User interface logic
 
-$("document").ready(function(){
-    // For pizza size
+// For pizza size
 
-    function getSize(){
-        return $("pizza-size")
-        .find (":selected")
-        .val();
-    }
+function getSize(){
+    return $("#sizes")
+    .find (":selected")
+    .val();
+}
 
     // For the crust type
 
     function getCrust(){
-        return $("crust-type")
-        .find(":selscted")
+        return $("#crusts")
+        .find("#crusts:selected")
         .val();
     }
-})
+
+        // For toppings
+
+        function getTopping(){
+            var allToppings = [];
+            $("#toppings :checked").each(function(){
+                allToppings.push($(this).val());
+            });
+            return allToppings;
+        }
+
+
+
+$("document").ready(function(){
+    
+    $("form#order").submit(function(event){
+        event.preventDefault();
+        // alert(getToppingPrice(getTopping()));
+        var sizeOfPizza = getSize();
+        var crustOfPizza = getCrust();
+        var allToppings = getTopping();
+
+        var newPizza = new Pizza(sizeOfPizza,crustOfPizza);
+        newPizza.toppings.push(allToppings);
+        var order1 = getSizePrice(sizeOfPizza)+getCrustPrice(crustOfPizza)+getToppingPrice(allToppings);
+
+        $("#appendOrder").append(
+        " <tr>" +
+         "<td>" +
+        newPizza.size +
+        "</td>" +
+        "<td>" +
+        newPizza.crust +
+        "</td>" +
+        "<td>" +
+        newPizza.toppings +
+        "</td>" +
+        "<td>" +
+        order1 +
+        "</td>" +
+        "</tr>"
+        );
+    });
+
+    var total = parseInt($("#quantity").val());
+    function getTotal(){
+        var priceFirstPizza = getSizePrice(getSize())+
+        getCrustPrice(getCrust())+
+        getToppingPrice(getTopping());
+        return priceFirstPizza;
+
+    };
+
+    var orderList = [];
+    $("#submit").on("click",function(){
+        total +=1;
+        $("#quantity").text(total);
+        orderList.push(getTotal());
+        var totalPrice = 0;
+        orderList.forEach(function(pizza){
+            totalPrice += pizza;
+        });
+    });
+
+    
+
+    $("#delivery").click(function(){
+        var location = prompt("Enter you delivery location");
+        alert("Your pizza will be delivered at " + location + "Your delivery charge is 150");
+    })
+
+    $("#pickup").click(function(){
+        alert("Your Pizza is ready for pickup.Welcome.")
+    })
+
+        
+      });
+
+
+
+
+
+
+      $("#delivery").click(function(){
+          alert("Your delivery cost is ksh.200 .Please confirm delivery.")
+      });

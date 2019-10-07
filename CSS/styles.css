@@ -19,6 +19,14 @@ header{
     color: white;
 }
 
+table{
+    align-content: center;
+}
+
+#orderSummary{
+    margin-left: 50%;
+}
+
 nav ul{
     display: flex;
     flex-direction: row;
