@@ -118,7 +118,7 @@ function getSize(){
 
     function getCrust(){
         return $("#crusts")
-        .find("#crusts:selected")
+        .find(":selected")
         .val();
     }
 
@@ -126,7 +126,7 @@ function getSize(){
 
         function getTopping(){
             var allToppings = [];
-            $("#toppings :checked").each(function(){
+            $(":checked").each(function(){
                 allToppings.push($(this).val());
             });
             return allToppings;
@@ -196,14 +196,17 @@ $("document").ready(function(){
         alert("Your Pizza is ready for pickup.Welcome.")
     })
 
+    $("#submitFeedback").click(function(){
+        submit();
+        event.preventDefault();
+        alert("Feedback receivedThankyou")
+    })
+
+
         
       });
 
 
 
 
-
-
-      $("#delivery").click(function(){
-          alert("Your delivery cost is ksh.200 .Please confirm delivery.")
-      });
+      

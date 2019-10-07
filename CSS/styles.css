@@ -117,3 +117,13 @@ padding: 7%;
 #lefter{
     float: left;
 }
+
+#contact{
+    justify-content: center;
+    margin-left: 30%;
+    padding-top: 50px;
+}
+
+#message{
+    padding-top: 10px;
+}
