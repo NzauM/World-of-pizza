@@ -131,6 +131,7 @@ function getSize(){
             });
             return allToppings;
         }
+        
 
 
 
@@ -146,7 +147,6 @@ $("document").ready(function(){
         var newPizza = new Pizza(sizeOfPizza,crustOfPizza);
         newPizza.toppings.push(allToppings);
         var order1 = getSizePrice(sizeOfPizza)+getCrustPrice(crustOfPizza)+getToppingPrice(allToppings);
-
         $("#appendOrder").append(
         " <tr>" +
         //  "<td>" +

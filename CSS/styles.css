@@ -1,6 +1,12 @@
 body{
     width: 100%;
     overflow-x: hidden;
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Courgette', cursive;
+    scroll-behavior: smooth;
+    font-size: 22px;
+
+
 }
 header{
     background-image: url("https://media.gettyimages.com/photos/delicious-italian-pizza-picture-id1124359123?s=2048x2048");
@@ -29,6 +35,11 @@ td{
 
 #orderSummary{
     margin-left: 40%;
+    /* background-image: url(../Images/cheese\ pull.jpeg); */
+    height: 60vh;
+
+    /* align-content: center; */
+    /* background-image:url(../Images/pizza\ blue\ background.jpeg); */
 }
 
 nav ul{
@@ -41,26 +52,30 @@ nav ul{
     /* margin: auto; */
     margin-left: 60%;
     background-color: transparent;
+    
 }
 
 nav{
     background-color: transparent;
     position: fixed;
     color:white;
-    margin-left: 60%;
+    /* margin-left: 60%; */
     justify-content: space-between;
+    box-shadow: 5px 5px 5px silver;
+    margin-top: 0%;
+    width: 100%;
 }
 
 nav ul li{
     text-decoration: none;
-    padding: 8%;
+    padding-right: 8%;
     list-style-type: none;
-    padding-right: 5%;
+    /* padding-right: 5%; */
     /* flex-wrap: wrap; */
     /* text-transform: uppercase; */
 }
 
-nav ul li{
+nav ul li:hover{
     text-decoration: underline;
 
 }
@@ -70,6 +85,9 @@ nav ul li{
     justify-content: space-between;
     margin-right: 3%;
 }
+#order2{
+    padding:3%;
+}
 
 #aboutImage{
     float: left;
@@ -77,6 +95,10 @@ nav ul li{
      /* height: 300px; */
      width:500px;
      
+}
+
+#about > h2{
+    padding-top: 5%;
 }
 
 #welcome{
@@ -130,6 +152,8 @@ padding: 7%;
 
 #summary{
     text-align: center;
+    padding-top: 5%;
+    
 }
 
 #lefter{
@@ -171,3 +195,9 @@ footer{
 
     
 }
+
+@media only screen and (max-width: 1000px) {
+    #about{
+        display: block;
+    }
+  }
