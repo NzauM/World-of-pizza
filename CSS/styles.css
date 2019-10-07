@@ -23,8 +23,12 @@ table{
     align-content: center;
 }
 
+td{
+    padding: 20px;
+}
+
 #orderSummary{
-    margin-left: 50%;
+    margin-left: 40%;
 }
 
 nav ul{
@@ -39,12 +43,26 @@ nav ul{
     background-color: transparent;
 }
 
+nav{
+    background-color: transparent;
+    position: fixed;
+    color:white;
+    margin-left: 60%;
+    justify-content: space-between;
+}
+
 nav ul li{
     text-decoration: none;
-    /* padding: 5%; */
+    padding: 8%;
     list-style-type: none;
     padding-right: 5%;
     /* flex-wrap: wrap; */
+    /* text-transform: uppercase; */
+}
+
+nav ul li{
+    text-decoration: underline;
+
 }
 
 .icons{
@@ -120,10 +138,36 @@ padding: 7%;
 
 #contact{
     justify-content: center;
-    margin-left: 30%;
+    /* margin-left: 30%; */
     padding-top: 50px;
+    height: 100vh;
+    margin-top: 20%;
+}
+
+#submitFeedback{
+    width: 40%;
+    margin-left: 30%;
 }
 
 #message{
     padding-top: 10px;
+}
+
+footer{
+    background-image: url("https://media.gettyimages.com/photos/slice-of-pizza-being-lifted-from-a-pizza-pie-with-lots-of-cheese-and-picture-id1059263080?s=2048x2048");
+}
+
+#name #email{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 40%;
+}
+
+.overlay > h2{
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 2%;
+
+    
 }

@@ -13,21 +13,21 @@
 <body>
   <nav>
     <ul>
-      <li>Home</li>
-      <li>About Us</li>
-      <li>Order</li>
-      <li>Contact Us</li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about"> About Us</a></li>
+      <li><a href="#order">Order</a></li>
+      <li><a href="#contact">Contact Us</a></li>
     </ul>
   </nav>
   <header>
-    <div class="overlay">
+    <div class="overlay" id="home">
     <h1>World of Pizza</h1>
     <h3>Prepare to have deliciousness jump to your mouth.</h3>
     <h5 id="mouseclick">Explore</h5>
     </div>
   </header>
-  <section>
-    <h2 style="text-align:center">ABOUT US</h2>
+  <section id="about">
+    <h2 style="text-align:center ">HOW TO ORDER.</h2>
     <img src="https://cdn.pixabay.com/photo/2016/11/11/10/19/chef-1816249_960_720.jpg"  id="aboutImage">
       <div id="welcome">
     <h4>Welcome </h4>
@@ -113,14 +113,16 @@
     <button type="submit" id="pickup">personal pick up</button>
   </div>
   <footer id="contact">
-      <h2>CONTACT US</h2>
-      <div class="form form-control">
+    <div class="overlay">
+      <h2 >CONTACT US</h2>
+      <div class="form form-control ">
           <form action="">
-          <input id="name" required placeholder="Name...">
-          <input id="email" required  placeholder="Email..."><br>
-          <input id="message" placeholder="Your message here..." required><br><br>
-          <input id="submitFeedback" type="submit" placeholder="Submit">
+          <input class="form-control" id="name" required placeholder="Name..."><br>
+          <input class="form-control" id="email" required  placeholder="Email..."><br>
+          <input class="form-control" id="message" placeholder="Your message here..." required><br><br>
+          <input class="form-control" id="submitFeedback" type="submit" placeholder="Submit">
           </form>
+      </div>
       </div>
   </footer>
 </body>

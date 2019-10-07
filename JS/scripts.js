@@ -149,12 +149,12 @@ $("document").ready(function(){
 
         $("#appendOrder").append(
         " <tr>" +
-         "<td>" +
-        newPizza.size +
-        "</td>" +
-        "<td>" +
-        newPizza.crust +
-        "</td>" +
+        //  "<td>" +
+        // newPizza.size +
+        // "</td>" +
+        // "<td>" +
+        // newPizza.crust +
+        // "</td>" +
         "<td>" +
         newPizza.toppings +
         "</td>" +
