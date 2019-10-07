@@ -39,7 +39,7 @@ nav ul{
     flex-direction: row;
     margin-right: 5%;
     width: 80%;
-    margin-left: 40%;
+    margin-left: 5%;
     background-color: transparent;
     
 }
@@ -170,7 +170,20 @@ footer{
 
 
 @media only screen and (max-width: 1000px) {
-    #about{
-        display: block;
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow-wrap: break-word;
+    }
+
+    .icons{
+        flex-direction: column;
+    }
+
+    nav{
+        display: none;
+    }
+    #aboutImage #summaryImage{
+        display: none;
     }
   }
