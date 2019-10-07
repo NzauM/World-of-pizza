@@ -139,7 +139,6 @@ $("document").ready(function(){
     
     $("form#order").submit(function(event){
         event.preventDefault();
-        // alert(getToppingPrice(getTopping()));
         var sizeOfPizza = getSize();
         var crustOfPizza = getCrust();
         var allToppings = getTopping();
@@ -149,12 +148,6 @@ $("document").ready(function(){
         var order1 = getSizePrice(sizeOfPizza)+getCrustPrice(crustOfPizza)+getToppingPrice(allToppings);
         $("#appendOrder").append(
         " <tr>" +
-        //  "<td>" +
-        // newPizza.size +
-        // "</td>" +
-        // "<td>" +
-        // newPizza.crust +
-        // "</td>" +
         "<td>" +
         newPizza.toppings +
         "</td>" +

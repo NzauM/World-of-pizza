@@ -1,7 +1,6 @@
 body{
     width: 100%;
     overflow-x: hidden;
-    /* font-family: 'Indie Flower', cursive; */
     font-family: 'Courgette', cursive;
     scroll-behavior: smooth;
     font-size: 22px;
@@ -10,9 +9,6 @@ body{
 }
 header{
     background-image: url("https://media.gettyimages.com/photos/delicious-italian-pizza-picture-id1124359123?s=2048x2048");
-    /* background-position: center;
-    background-size: cover; */
-    /* background-repeat:repeat; */
     height: 100vh;
 }
 
@@ -35,22 +31,15 @@ td{
 
 #orderSummary{
     margin-left: 40%;
-    /* background-image: url(../Images/cheese\ pull.jpeg); */
     height: 60vh;
-
-    /* align-content: center; */
-    /* background-image:url(../Images/pizza\ blue\ background.jpeg); */
 }
 
 nav ul{
     display: flex;
     flex-direction: row;
     margin-right: 5%;
-    /* justify-content: space-between; */
-    /* text-decoration: none; */
     width: 80%;
-    /* margin: auto; */
-    margin-left: 60%;
+    margin-left: 40%;
     background-color: transparent;
     
 }
@@ -59,7 +48,6 @@ nav{
     background-color: transparent;
     position: fixed;
     color:white;
-    /* margin-left: 60%; */
     justify-content: space-between;
     box-shadow: 5px 5px 5px silver;
     margin-top: 0%;
@@ -70,9 +58,6 @@ nav ul li{
     text-decoration: none;
     padding-right: 8%;
     list-style-type: none;
-    /* padding-right: 5%; */
-    /* flex-wrap: wrap; */
-    /* text-transform: uppercase; */
 }
 
 nav ul li:hover{
@@ -91,8 +76,6 @@ nav ul li:hover{
 
 #aboutImage{
     float: left;
-    /* padding-right: 10%;  */
-     /* height: 300px; */
      width:500px;
      
 }
@@ -106,8 +89,6 @@ nav ul li:hover{
 }
 
 #menu{
-    /* margin-right: 3%;
-    margin-left: 5%; */
     background-image: url("https://cdn.pixabay.com/photo/2017/01/15/10/20/texture-1981165_960_720.jpg");
 }
 
@@ -127,14 +108,6 @@ nav ul li:hover{
     margin-right: 3%;
     margin-bottom: 5%;
 }
-
-/* figure{
-    display: flex;
-} */
-
-/* #menu > figure{
-padding: 7%;
-} */
 
 #menuTitle{
     text-align: center;
@@ -162,7 +135,6 @@ padding: 7%;
 
 #contact{
     justify-content: center;
-    /* margin-left: 30%; */
     padding-top: 50px;
     height: 100vh;
     margin-top: 20%;
@@ -195,6 +167,7 @@ footer{
 
     
 }
+
 
 @media only screen and (max-width: 1000px) {
     #about{
