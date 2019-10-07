@@ -192,7 +192,7 @@ $("document").ready(function(){
     $("#submitFeedback").click(function(){
         submit();
         event.preventDefault();
-        alert("Feedback receivedThankyou")
+        alert("Feedback well received.Thankyou.")
     })
 
 
